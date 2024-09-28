@@ -1,4 +1,5 @@
 name: packet-player-health-indicators
 version: '1.0'
 main: me.sootysplash.health.Main
+author: "sootysplash"
 api-version: '1.20'

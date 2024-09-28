@@ -1,6 +1,7 @@
 package me.sootysplash.health;
 
 import com.github.retrooper.packetevents.PacketEvents;
+import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 import io.github.retrooper.packetevents.factory.spigot.SpigotPacketEventsBuilder;
 
@@ -19,6 +20,8 @@ public final class Main extends JavaPlugin {
     public void onEnable() {
         PacketEvents.getAPI().init();
         Lister.initIndicators();
+        PluginDescriptionFile pdfFile = this.getDescription();
+        getLogger().info(pdfFile.getName() + " version " + pdfFile.getVersion() + " made by " + pdfFile.getAuthors() + " is enabled!");
     }
 
     @Override
